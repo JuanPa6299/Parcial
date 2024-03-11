@@ -45,6 +45,15 @@ background-attachment: fixed;
     margin-bottom: 20px;
     float: left;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    height: 50px; /* ajusta el tamaño de la imagen en relación con el tamaño de la fuente del título */
+    margin-right: 10px; /* ajusta el espacio entre la imagen y el título */
+    align-items: center;
 }
 #menu{
     font-family: Helvetica,Arial;
