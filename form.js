@@ -32,46 +32,38 @@ window.onload = function() {
     var error = document.getElementById('error');
 
     function validarName(e) {
-        if (nombre.value.trim() === '') {
+        if (nombre.value === '' || nombre.value == null) {
             error.style.display = 'block';
-            error.innerHTML = '<li>Complete name</li>';
+            error.innerHTML += '<li>Complete su nombre</li>';
             console.log('Please add a name');
             e.preventDefault();
-        } else {
-            error.style.display = 'none';
-        }
+        } 
     }
 
     function validarEmail(e) {
-        if (correo.value.trim() === '') {
+        if (correo.value == '' || correo.value == null) {
             error.style.display = 'block';
-            error.innerHTML = '<li>Complete email</li>';
+            error.innerHTML += '<li>Complete su email</li>';
             console.log('Please add an email');
             e.preventDefault();
-        } else {
-            error.style.display = 'none';
-        }
+        } 
     }
 
     function validarGender(e) {
-        if (!genero.value) {
+        if (genero.value =='' || genero.value == null) {
             error.style.display = 'block';
-            error.innerHTML = '<li>Select gender</li>';
-            console.log('Please select gender');
+            error.innerHTML += '<li>Seleccione si es cliente o proveedor</li>';
+            console.log('Please select an option');
             e.preventDefault();
-        } else {
-            error.style.display = 'none';
         }
     }
 
     function validarTerms(e) {
-        if (!terminos.checked) {
+        if (terminos.checked == false) {
             error.style.display = 'block';
-            error.innerHTML = '<li>Agree terms & conditions</li>';
+            error.innerHTML += '<li>Acepte términos y condiciones</li>';
             console.log('Please agree terms & conditions');
             e.preventDefault();
-        } else {
-            error.style.display = 'none';
         }
     }
 
